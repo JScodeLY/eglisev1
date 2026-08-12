@@ -19,6 +19,7 @@ Pages prévues : accueil, qui sommes-nous, nos ministères, prédications, galer
 - Tailwind CSS v4 — config **CSS-first** via `@theme` dans `app/globals.css` ; il n'y a pas de `tailwind.config`, ne pas en créer
 - Versioning : GitHub (dépôt `eglisev1`, le projet vit dans le sous-dossier `epehmif/`)
 - Déploiement cible : Netlify — **rien n'est encore configuré** (ni `netlify.toml`, ni `.github/workflows/`). Le mettre en place est une tâche à part entière, ne pas prétendre que ça existe.
+- Backend : **aucun pour l'instant**. Si un backend devient nécessaire plus tard (auth de l'espace pôles, stockage de contenu dynamique, etc.), utiliser **Convex**, pas Supabase.
 
 ## Commandes
 
