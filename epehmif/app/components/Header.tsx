@@ -20,6 +20,7 @@ const MORE_LINKS = [
 export default function Header() {
   const pathname = usePathname();
   const isHome = pathname === "/";
+  const isPoles = pathname?.startsWith("/espace-poles") ?? false;
   const [scrolled, setScrolled] = useState(false);
   const [moreOpen, setMoreOpen] = useState(false);
   const [lang, setLang] = useState<"fr" | "hmn">("fr");
@@ -34,6 +35,8 @@ export default function Header() {
 
   const isMorePage = MORE_LINKS.some((l) => l.href === pathname);
   const opaque = !isHome || scrolled;
+
+  if (isPoles) return null;
 
   return (
     <>

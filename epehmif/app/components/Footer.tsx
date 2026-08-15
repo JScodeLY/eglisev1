@@ -1,6 +1,12 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Footer() {
+  const pathname = usePathname();
+  if (pathname?.startsWith("/espace-poles")) return null;
+
   return (
     <footer className="bg-dark text-on-dark">
       <div className="max-w-[1240px] mx-auto px-5 md:px-8 py-14 grid gap-10 md:grid-cols-3">
