@@ -1,26 +1,66 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Palette H — Bordeaux & ivoire */
+  --bg: #faf6f1;
+  --pri: #7a2233;
+  --acc: #c9a96a;
+  --sec: #b4757f;
+  --txt: #2b1a1d;
+  --card: #fffdfa;
+  --line: #ede3da;
+  --dark: #241417;
+  --on-dark: #fdf8f3;
+  --fill: #7a2233;
+  --on-pri: #ffffff;
+  --on-acc: #2b1a1d;
+  --br: 10px;
+  --bsh: none;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-bg: var(--bg);
+  --color-pri: var(--pri);
+  --color-acc: var(--acc);
+  --color-sec: var(--sec);
+  --color-txt: var(--txt);
+  --color-card: var(--card);
+  --color-line: var(--line);
+  --color-dark: var(--dark);
+  --color-on-dark: var(--on-dark);
+  --color-fill: var(--fill);
+  --color-on-pri: var(--on-pri);
+  --color-on-acc: var(--on-acc);
+  --radius-btn: var(--br);
+  --font-heading: var(--font-lora);
+  --font-body: var(--font-work-sans);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--txt);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--acc);
 }
