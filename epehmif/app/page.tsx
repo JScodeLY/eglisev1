@@ -1,24 +1,71 @@
 import Image from "next/image";
 import Link from "next/link";
 
+function DoorIcon() {
+  return (
+    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+      <path
+        d="M5 20V4.6c0-.5.35-.94.85-1.05L13.5 2v18M5 20h13.5M5 20H3M18.5 20h2M13.5 20V3.5L18.5 5v15"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <circle cx="11.3" cy="11.5" r="0.9" fill="currentColor" />
+    </svg>
+  );
+}
+
+function HeadphonesIcon() {
+  return (
+    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+      <path
+        d="M4 13v-2a7 7 0 0 1 14 0v2"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+      />
+      <rect x="2.5" y="12" width="4" height="6" rx="1.6" stroke="currentColor" strokeWidth="1.7" />
+      <rect x="15.5" y="12" width="4" height="6" rx="1.6" stroke="currentColor" strokeWidth="1.7" />
+    </svg>
+  );
+}
+
+function HeartHandsIcon() {
+  return (
+    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+      <path
+        d="M11 18.5s-7-4.35-7-9.2A3.8 3.8 0 0 1 11 6.7 3.8 3.8 0 0 1 18 9.3c0 4.85-7 9.2-7 9.2Z"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
 const START_CARDS = [
   {
     title: "Vous découvrez l'église ?",
     text: "Venez tel(le) que vous êtes, un dimanche matin. Pas de tenue particulière, pas de code à connaître.",
     href: "/notre-eglise",
     cta: "Découvrir notre église",
+    icon: DoorIcon,
   },
   {
     title: "Vous cherchez une prédication ?",
     text: "Toute notre archive de messages est en ligne, filtrable par date, orateur et série.",
     href: "/predications",
     cta: "Écouter les messages",
+    icon: HeadphonesIcon,
   },
   {
     title: "Vous voulez vous impliquer ?",
     text: "Neuf pôles font vivre la communauté au quotidien : découvrez leurs missions.",
     href: "/ministeres",
     cta: "Voir les ministères",
+    icon: HeartHandsIcon,
   },
 ];
 
@@ -113,7 +160,12 @@ export default function Home() {
               key={card.title}
               className="rounded-2xl bg-card border border-line p-7 flex flex-col"
             >
-              <h3 className="font-heading font-semibold text-[21px] mb-3">{card.title}</h3>
+              <div className="flex items-center gap-3 mb-3">
+                <span className="text-pri shrink-0">
+                  <card.icon />
+                </span>
+                <h3 className="font-heading font-semibold text-[21px]">{card.title}</h3>
+              </div>
               <p className="text-[15px] leading-[1.6] opacity-85 mb-6 flex-1">{card.text}</p>
               <Link href={card.href} className="text-pri font-semibold text-sm hover:text-sec">
                 {card.cta} →
