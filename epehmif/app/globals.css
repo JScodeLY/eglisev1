@@ -64,3 +64,39 @@ p {
   text-transform: uppercase;
   color: var(--acc);
 }
+
+@keyframes fadeup {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+.animate-fadeup {
+  animation: fadeup 0.7s ease both;
+}
+
+.animate-bob {
+  animation: bob 2.4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fadeup,
+  .animate-bob {
+    animation: none;
+  }
+}

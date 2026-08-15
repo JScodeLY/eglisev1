@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-20T00:00:00.000Z",
+  "title": "Design System: EPEHMIF",
+  "extensions": {
+    "colorMeta": {
+      "bordeaux-profond": { "role": "primary", "displayName": "Bordeaux profond", "canonical": "oklch(37% 0.12 15)", "tonalRamp": ["#2A0C13", "#421320", "#5A1A2C", "#7A2233", "#9A3F4C", "#B96B76", "#D6A0A6", "#F0D9DC"] },
+      "dore-chaleureux": { "role": "tertiary", "displayName": "Doré chaleureux", "canonical": "oklch(75% 0.09 75)", "tonalRamp": ["#4A3B1F", "#6B562C", "#8D7139", "#AE8C4A", "#C9A96A", "#D9C08C", "#E8D8B3", "#F5EDDA"] },
+      "rose-poudre": { "role": "secondary", "displayName": "Rose poudré", "canonical": "oklch(64% 0.06 15)", "tonalRamp": ["#3A1E22", "#5C2E34", "#7E4048", "#9E5A62", "#B4757F", "#C79BA2", "#DBC0C5", "#EDE1E3"] },
+      "ivoire-fond": { "role": "neutral", "displayName": "Ivoire fond", "canonical": "oklch(96% 0.015 60)", "tonalRamp": [] },
+      "carte-nacree": { "role": "neutral", "displayName": "Carte nacrée", "canonical": "oklch(99% 0.008 70)", "tonalRamp": [] },
+      "filet-sable": { "role": "neutral", "displayName": "Filet sable", "canonical": "oklch(90% 0.02 50)", "tonalRamp": [] },
+      "encre": { "role": "neutral", "displayName": "Encre", "canonical": "oklch(22% 0.03 15)", "tonalRamp": [] },
+      "nuit-grenat": { "role": "neutral", "displayName": "Nuit grenat", "canonical": "oklch(17% 0.03 15)", "tonalRamp": [] },
+      "ivoire-sur-nuit": { "role": "neutral", "displayName": "Ivoire sur nuit", "canonical": "oklch(97% 0.012 60)", "tonalRamp": [] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "H1 du hero de l'accueil uniquement." },
+      "headline": { "displayName": "Headline", "purpose": "H1 des pages internes." },
+      "title": { "displayName": "Title", "purpose": "Titres de section (H2) et sous-section." },
+      "body": { "displayName": "Body", "purpose": "Texte courant, plancher 16px." },
+      "label": { "displayName": "Label", "purpose": "Eyebrows et légendes de rôle, uppercase tracké." }
+    },
+    "shadows": [
+      { "name": "overlay-flottant", "value": "0 16px 40px rgba(0,0,0,.16)", "purpose": "Réservée aux éléments qui flottent au-dessus du contenu (dropdown \"Plus\")." }
+    ],
+    "motion": [
+      { "name": "header-bg", "value": "background-color 0.25s ease", "purpose": "Bascule transparent → opaque au scroll sur l'accueil." },
+      { "name": "veil-opacity", "value": "opacity 0.3s ease", "purpose": "Voile sombre du hero." },
+      { "name": "button-hover", "value": "filter 0.15s ease", "purpose": "brightness(1.12) au survol des boutons pleins." }
+    ],
+    "breakpoints": [
+      { "name": "mobile-nav-collapse", "value": "880px" },
+      { "name": "md", "value": "768px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "CTA principal : réserver un dimanche, envoyer un formulaire, filtre actif.",
+      "html": "<button class=\"ds-btn-primary\">Venez un dimanche</button>",
+      "css": ".ds-btn-primary { background: #7A2233; color: #ffffff; font-family: 'Work Sans', system-ui, sans-serif; font-size: 14.5px; font-weight: 600; padding: 10px 17px; border: none; border-radius: 10px; transition: filter 0.15s ease; cursor: pointer; } .ds-btn-primary:hover { filter: brightness(1.12); } .ds-btn-primary:focus-visible { outline: 2px solid #C9A96A; outline-offset: 2px; }"
+    },
+    {
+      "name": "Secondary Button (on dark)",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "CTA secondaire sur le hero (fond sombre) : découvrir l'église.",
+      "html": "<button class=\"ds-btn-secondary\">Découvrir notre église</button>",
+      "css": ".ds-btn-secondary { background: transparent; color: #FDF8F3; font-family: 'Work Sans', system-ui, sans-serif; font-size: 14.5px; font-weight: 600; padding: 10px 17px; border: 1.5px solid rgba(253,248,243,.6); border-radius: 10px; transition: background 0.15s ease, color 0.15s ease; cursor: pointer; } .ds-btn-secondary:hover { background: #FDF8F3; color: #241417; }"
+    },
+    {
+      "name": "Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Carte de contenu (ministère, message, membre du conseil).",
+      "html": "<div class=\"ds-card\"><h3 class=\"ds-card-title\">Titre de carte</h3><p class=\"ds-card-text\">Texte de description.</p></div>",
+      "css": ".ds-card { background: #FFFDFA; border: 1px solid #EDE3DA; border-radius: 16px; padding: 28px; } .ds-card-title { font-family: 'Lora', Georgia, serif; font-weight: 600; font-size: 21px; color: #2B1A1D; margin: 0 0 12px; } .ds-card-text { font-family: 'Work Sans', system-ui, sans-serif; font-size: 15px; line-height: 1.6; color: #2B1A1D; opacity: 0.85; margin: 0; }"
+    },
+    {
+      "name": "Info Block (gold)",
+      "kind": "custom",
+      "refersTo": "card",
+      "description": "Bloc doré structurant une information (horaires, adresse, bandeau baptême). Jamais de texte clair dessus.",
+      "html": "<div class=\"ds-info-block\"><p class=\"ds-eyebrow\">Le dimanche chez nous</p><h3 class=\"ds-info-title\">Culte du dimanche</h3><p class=\"ds-info-text\">10h00 – 11h45, bilingue</p></div>",
+      "css": ".ds-info-block { background: color-mix(in srgb, #C9A96A 16%, #FFFDFA); border: 1px solid rgba(201,169,106,.4); border-radius: 16px; padding: 32px; } .ds-eyebrow { font-family: 'Work Sans', system-ui, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: #C9A96A; margin: 0 0 12px; } .ds-info-title { font-family: 'Lora', Georgia, serif; font-weight: 600; font-size: 24px; color: #2B1A1D; margin: 0 0 12px; } .ds-info-text { font-family: 'Work Sans', system-ui, sans-serif; font-size: 15px; line-height: 1.6; color: #2B1A1D; opacity: 0.85; margin: 0; }"
+    },
+    {
+      "name": "Filter Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Filtre pilule (albums de galerie, sélecteur de langue).",
+      "html": "<button class=\"ds-chip ds-chip-active\">Culte</button><button class=\"ds-chip\">Baptêmes</button>",
+      "css": ".ds-chip { background: transparent; color: #2B1A1D; font-family: 'Work Sans', system-ui, sans-serif; font-size: 14px; font-weight: 500; padding: 6px 16px; border: 1px solid #EDE3DA; border-radius: 999px; cursor: pointer; } .ds-chip-active { background: #7A2233; color: #ffffff; border-color: #7A2233; }"
+    },
+    {
+      "name": "Header Nav Link",
+      "kind": "nav",
+      "refersTo": "nav",
+      "description": "Lien de navigation principal, filet doré 2px quand actif.",
+      "html": "<a class=\"ds-nav-link ds-nav-link-active\" href=\"#\">Accueil</a>",
+      "css": ".ds-nav-link { font-family: 'Work Sans', system-ui, sans-serif; font-size: 14px; font-weight: 500; color: inherit; text-decoration: none; padding-bottom: 4px; border-bottom: 2px solid transparent; white-space: nowrap; } .ds-nav-link-active { border-bottom-color: #C9A96A; } .ds-nav-link:focus-visible { outline: 2px solid #C9A96A; outline-offset: 2px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "La Maison Commune",
+    "overview": "EPEHMIF n'est pas une institution qu'on visite, c'est une maison qu'on ouvre. Le système visuel traduit cette idée par un fond ivoire chaud plutôt que blanc clinique, une typographie serif de titre (Lora) qui porte de la chaleur sans tomber dans le solennel-poussiéreux, et une seule couleur d'action — le bordeaux — qui ne se dilue jamais dans des dégradés ou des accents multiples. Le doré ne décore pas : il structure les zones d'information (horaires, adresse, bandeau baptême), jamais le texte lui-même. Ce que ce système rejette explicitement : le site d'église daté à la mise en page institutionnelle et aux tons ternes, les photos clipart génériques, et le réflexe SaaS-cream (fond crème par défaut, eyebrow au-dessus de chaque section, grilles de cartes identiques). Une seule couleur porte l'action ; le reste de la palette structure ou informe, il ne décore pas.",
+    "keyCharacteristics": [
+      "Fond ivoire chaud (#FAF6F1), jamais blanc pur",
+      "Une seule couleur d'action (bordeaux #7A2233)",
+      "Le doré structure l'information, ne décore jamais le texte",
+      "Serif chaleureux en titre (Lora), sans-serif neutre en corps (Work Sans)",
+      "Plat par défaut : profondeur via bordures et fonds teintés, pas d'ombres"
+    ],
+    "rules": [
+      { "name": "La Règle du Doré Jamais Clair", "body": "Le doré porte toujours du texte foncé (encre), jamais de texte clair. Sans exception.", "section": "colors" },
+      { "name": "La Règle de l'Action Unique", "body": "Une seule couleur porte l'action et le titre — le bordeaux. Le doré informe, le rose poudré n'existe qu'au survol.", "section": "colors" },
+      { "name": "La Règle du Plancher 16px", "body": "Aucun texte de corps sous 16px, interligne 1.6 sans exception.", "section": "typography" },
+      { "name": "La Règle du Plat-par-Défaut", "body": "Les cartes et blocs de contenu n'ont jamais d'ombre. La séparation vient d'une bordure 1px ou d'un fond légèrement plus clair. L'ombre est réservée aux éléments qui flottent réellement (menus, dropdowns).", "section": "elevation" }
+    ],
+    "dos": [
+      "Do garder le bordeaux (#7A2233) comme unique couleur d'action",
+      "Do toujours poser du texte foncé sur un fond doré, jamais de texte clair",
+      "Do utiliser des bordures fines et des fonds tonaux pour la hiérarchie, pas des ombres",
+      "Do respecter le plancher 16px / interligne 1.6 sur tout texte de corps",
+      "Do utiliser text-wrap: balance sur les titres et text-wrap: pretty sur les paragraphes longs"
+    ],
+    "donts": [
+      "Don't introduire une deuxième couleur d'action à côté du bordeaux",
+      "Don't ajouter d'ombre portée sur les cartes ou blocs de contenu",
+      "Don't reproduire le site d'église daté à la mise en page institutionnelle froide",
+      "Don't utiliser de photos clipart génériques ou de stock non représentatif",
+      "Don't tomber dans le réflexe SaaS-cream (eyebrow systématique, grilles de cartes identiques, texte en dégradé)"
+    ]
+  }
+}

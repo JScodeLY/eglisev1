@@ -54,7 +54,7 @@ export default function Home() {
               "linear-gradient(100deg, rgba(0,0,0,.45) 0%, rgba(0,0,0,.12) 55%, transparent 80%)",
           }}
         />
-        <div className="relative z-10 max-w-[760px] px-5 md:px-8 pt-[clamp(118px,17vh,190px)] pb-[clamp(56px,8vh,90px)] text-on-dark">
+        <div className="animate-fadeup relative z-10 max-w-[760px] px-5 md:px-8 pt-[clamp(118px,17vh,190px)] pb-[clamp(56px,8vh,90px)] text-on-dark">
           <p className="eyebrow mb-4">Une maison commune à Saint-Vrain</p>
           <h1 className="font-heading font-semibold text-[clamp(38px,6.2vw,76px)] leading-[1.05] mb-5">
             L&rsquo;EPEHMIF vous accueille
@@ -63,7 +63,7 @@ export default function Home() {
             Une église protestante évangélique hmong d&rsquo;Île-de-France, ouverte à tous ceux
             qui cherchent une communauté vivante et fraternelle.
           </p>
-          <div className="flex flex-wrap gap-3.5">
+          <div className="flex flex-wrap items-center gap-3.5 mb-8">
             <Link
               href="/contact"
               className="rounded-[10px] bg-fill text-on-pri text-[14.5px] font-semibold px-6 py-3.5 transition-[filter] hover:brightness-110"
@@ -77,10 +77,32 @@ export default function Home() {
               Découvrir notre église
             </Link>
           </div>
+          <a
+            href="#"
+            aria-label="Voir la vidéo de présentation [À FOURNIR : lien vidéo]"
+            className="group inline-flex items-center gap-3 text-on-dark text-sm font-medium"
+          >
+            <span className="grid place-items-center w-[34px] h-[34px] rounded-full border-[1.5px] border-acc text-acc group-hover:text-on-dark group-hover:border-on-dark transition-colors">
+              <svg width="10" height="12" viewBox="0 0 10 12" fill="currentColor" aria-hidden="true">
+                <path d="M0 0l10 6-10 6z" />
+              </svg>
+            </span>
+            Voir la vidéo de présentation
+          </a>
         </div>
+        <a
+          href="#par-ou-commencer"
+          className="animate-bob absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-on-dark text-xs"
+        >
+          <svg width="18" height="28" viewBox="0 0 18 28" fill="none" aria-hidden="true">
+            <rect x="1" y="1" width="16" height="26" rx="8" stroke="currentColor" strokeWidth="1.5" />
+            <circle cx="9" cy="8" r="2" fill="currentColor" />
+          </svg>
+          Faites défiler
+        </a>
       </section>
 
-      <section className="max-w-[1160px] mx-auto px-5 md:px-8 py-[clamp(56px,8vw,104px)]">
+      <section id="par-ou-commencer" className="max-w-[1160px] mx-auto px-5 md:px-8 py-[clamp(56px,8vw,104px)]">
         <p className="eyebrow mb-3">Par où commencer</p>
         <h2 className="font-heading font-semibold text-[clamp(28px,3.6vw,44px)] leading-[1.15] mb-10 max-w-2xl">
           Trois portes d&rsquo;entrée, selon ce que vous cherchez

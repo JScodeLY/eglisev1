@@ -66,7 +66,10 @@ export default function Header() {
           }`}
         >
           <Link href="/" className="flex items-center gap-2.5 shrink-0">
-            <span className="grid place-items-center w-9 h-9 rounded-[9px] bg-fill text-on-pri font-heading font-semibold">
+            <span
+              title="Logo définitif à fournir"
+              className="grid place-items-center w-9 h-9 rounded-[9px] bg-fill text-on-pri font-heading font-semibold"
+            >
               E
             </span>
             <span className="flex flex-col leading-none">

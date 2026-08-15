@@ -11,7 +11,7 @@ function LoginScreen({ onLogin }: { onLogin: (pole: string) => void }) {
 
   return (
     <div className="min-h-screen grid place-items-center px-5">
-      <div className="w-full max-w-sm rounded-2xl bg-[#2f1a1e] border border-white/10 p-8">
+      <div className="w-full max-w-sm rounded-2xl bg-white/5 border border-white/10 p-8">
         <p className="eyebrow mb-2">Espace pôles</p>
         <h1 className="font-heading font-semibold text-2xl mb-6">Connexion</h1>
         <form
