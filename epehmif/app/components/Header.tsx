@@ -117,7 +117,7 @@ export default function Header() {
               onClick={() => setLang((l) => (l === "fr" ? "hmn" : "fr"))}
               title={lang === "fr" ? "Passer en hmong" : "Passer en français"}
               aria-label={lang === "fr" ? "Passer en hmong" : "Passer en français"}
-              className="rounded-full border px-2.5 py-1 text-[12.5px] font-semibold border-current"
+              className="relative rounded-full border px-2.5 py-1 text-[12.5px] font-semibold border-current before:content-[''] before:absolute before:-inset-[11px]"
             >
               {lang === "fr" ? "FR" : "HM"}
             </button>
