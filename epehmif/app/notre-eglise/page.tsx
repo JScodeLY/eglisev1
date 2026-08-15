@@ -18,7 +18,7 @@ const RATTACHEMENTS = [
 export default function NotreEglisePage() {
   return (
     <>
-      <div className="pt-[calc(66px+56px)] pb-10 max-w-[1160px] mx-auto px-5 md:px-8">
+      <div className="pt-[clamp(56px,8vw,104px)] pb-10 max-w-[1160px] mx-auto px-5 md:px-8">
         <p className="eyebrow mb-3">Notre église</p>
         <h1 className="font-heading font-semibold text-[clamp(34px,5vw,58px)] leading-[1.08]">
           Une maison commune
