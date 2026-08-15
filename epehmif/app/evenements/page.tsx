@@ -22,8 +22,20 @@ export default function EvenementsPage() {
         style={{ background: "color-mix(in srgb, var(--acc) 16%, var(--card))" }}
       >
         <p className="eyebrow mb-3">Rendez-vous réguliers</p>
-        <h2 className="font-heading font-semibold text-2xl mb-3">Culte du dimanche</h2>
-        <p className="text-[15px] leading-[1.6] opacity-85">[À FOURNIR : horaires des cultes]</p>
+        <div className="grid gap-6 md:grid-cols-3">
+          <div>
+            <h2 className="font-heading font-semibold text-lg mb-1">Culte du dimanche</h2>
+            <p className="text-[15px] leading-[1.6] opacity-85">10h00 – 11h45, bilingue</p>
+          </div>
+          <div>
+            <h2 className="font-heading font-semibold text-lg mb-1">Études en groupes</h2>
+            <p className="text-[15px] leading-[1.6] opacity-85">13h30 – 15h30</p>
+          </div>
+          <div>
+            <h2 className="font-heading font-semibold text-lg mb-1">Préparation au baptême</h2>
+            <p className="text-[15px] leading-[1.6] opacity-85">4 sessions, d&rsquo;octobre à février</p>
+          </div>
+        </div>
       </div>
 
       <div className="grid gap-[22px] md:grid-cols-2">

@@ -10,12 +10,12 @@ export type Pole = {
 
 export const POLES: Pole[] = [
   { name: "Conseil des anciens", group: "Gouvernance", description: "Gouvernance et supervision de l'église", members: 6 },
+  { name: "Section Hommes", group: "Sections & ministères", description: "Vie spirituelle et communautaire des hommes de l'église", members: 4 },
+  { name: "Section Femmes", group: "Sections & ministères", description: "Vie spirituelle et communautaire des femmes de l'église", members: 5 },
+  { name: "Section Jeunes", group: "Sections & ministères", description: "Accompagnement des jeunes de l'église", members: 3 },
   { name: "École du dimanche", group: "Sections & ministères", description: "Enseignement biblique des enfants", members: 4 },
-  { name: "Louange", group: "Sections & ministères", description: "Animation musicale des cultes", members: 5 },
-  { name: "Jeunesse", group: "Sections & ministères", description: "Accompagnement des jeunes de l'église", members: 3 },
-  { name: "Intercession", group: "Sections & ministères", description: "Prière pour l'église et ses membres", members: 4 },
-  { name: "Accueil", group: "Sections & ministères", description: "Accueil des visiteurs et nouveaux venus", members: 6 },
-  { name: "Missions", group: "Sections & ministères", description: "Soutien aux projets missionnaires", members: 3 },
+  { name: "Chant & musique", group: "Sections & ministères", description: "Animation musicale des cultes", members: 5 },
+  { name: "Cours de hmong", group: "Sections & ministères", description: "Apprentissage de la langue hmong", members: 3 },
   { name: "Communication", group: "Transverse", description: "Publication des contenus du site et des réseaux", members: 2, hasTasks: true },
   { name: "Trésorerie", group: "Transverse", description: "Gestion financière de l'église", members: 2 },
 ];

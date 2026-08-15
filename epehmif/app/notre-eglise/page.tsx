@@ -9,10 +9,18 @@ export const metadata: Metadata = {
 const ANCIENS = Array.from({ length: 6 }, (_, i) => `[À FOURNIR : nom de l'ancien ${i + 1}]`);
 
 const RATTACHEMENTS = [
-  "[À FOURNIR : intitulé complet et lien]",
-  "[À FOURNIR : intitulé complet et lien]",
-  "[À FOURNIR : intitulé complet et lien]",
-  "[À FOURNIR : intitulé complet et lien]",
+  "FECMIM — [À FOURNIR : intitulé complet et lien]",
+  "AECMF — [À FOURNIR : intitulé complet et lien]",
+  "CNEF — [À FOURNIR : intitulé complet et lien]",
+  "C&MA Hmong District — [À FOURNIR : intitulé complet et lien]",
+];
+
+const HISTOIRE = [
+  { year: "1976", label: "[À FOURNIR : description de l'étape 1976]" },
+  { year: "1979", label: "[À FOURNIR : description de l'étape 1979]" },
+  { year: "1992", label: "[À FOURNIR : description de l'étape 1992]" },
+  { year: "2002", label: "[À FOURNIR : description de l'étape 2002]" },
+  { year: "Aujourd'hui", label: "[À FOURNIR : transition EELF → EPEHMIF et date d'installation à Saint-Vrain]" },
 ];
 
 export default function NotreEglisePage() {
@@ -63,10 +71,11 @@ export default function NotreEglisePage() {
           className="grid gap-6"
           style={{ gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))" }}
         >
-          {["EELF", "…", "…", "…", "Transition"].map((label, i) => (
-            <div key={i} className="text-center">
+          {HISTOIRE.map((step) => (
+            <div key={step.year} className="text-center">
               <div className="w-3 h-3 rounded-full bg-acc mx-auto mb-3" />
-              <p className="text-sm opacity-70">{label === "Transition" ? "[À FOURNIR : transition EELF → EPEHMIF et date d'installation à Saint-Vrain]" : `[À FOURNIR : étape ${i + 1}]`}</p>
+              <p className="font-heading font-semibold text-sm mb-1">{step.year}</p>
+              <p className="text-sm opacity-70">{step.label}</p>
             </div>
           ))}
         </div>
@@ -79,7 +88,9 @@ export default function NotreEglisePage() {
         <h2 className="font-heading font-semibold text-[clamp(24px,2.8vw,34px)] leading-[1.15] mb-3">
           Conseil des anciens
         </h2>
-        <p className="text-sm opacity-70 mb-8">[À FOURNIR : nom et présentation du pasteur actuel]</p>
+        <p className="text-sm opacity-70 mb-8">
+          Pasteur d&rsquo;origine ivoirienne — [À FOURNIR : nom et présentation du pasteur actuel]
+        </p>
         <div
           className="grid gap-[22px]"
           style={{ gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))" }}

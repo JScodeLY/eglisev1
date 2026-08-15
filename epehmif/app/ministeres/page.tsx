@@ -5,12 +5,12 @@ export const metadata: Metadata = {
 };
 
 const MINISTERES = [
+  "Section Hommes",
+  "Section Femmes",
+  "Section Jeunes",
   "École du dimanche",
-  "Louange",
-  "Jeunesse",
-  "Intercession",
-  "Accueil",
-  "Missions",
+  "Chant & musique",
+  "Cours de hmong",
 ];
 
 export default function MinisteresPage() {
@@ -47,9 +47,7 @@ export default function MinisteresPage() {
       >
         <p className="eyebrow mb-3">Préparation au baptême</p>
         <h2 className="font-heading font-semibold text-2xl mb-3">Vous souhaitez être baptisé(e) ?</h2>
-        <p className="text-[15px] leading-[1.6] opacity-85">
-          [À FOURNIR : modalités de préparation au baptême]
-        </p>
+        <p className="text-[15px] leading-[1.6] opacity-85">4 sessions, d&rsquo;octobre à février.</p>
       </div>
     </div>
   );

@@ -29,7 +29,11 @@ export default function ContactPage() {
               91770 Saint-Vrain
             </p>
             <p className="eyebrow mb-3">Horaires</p>
-            <p className="text-[15px] leading-[1.6] opacity-90">[À FOURNIR : horaires des cultes]</p>
+            <p className="text-[15px] leading-[1.6] opacity-90">
+              Culte : 10h00 – 11h45, bilingue français/hmong
+              <br />
+              Études en groupes : 13h30 – 15h30
+            </p>
           </div>
           <div className="rounded-2xl border-2 border-dashed border-line h-64 grid place-items-center text-sm opacity-70">
             [Emplacement carte]

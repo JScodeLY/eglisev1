@@ -57,7 +57,7 @@ export default function Home() {
         <div className="animate-fadeup relative z-10 max-w-[760px] px-5 md:px-8 pt-[clamp(118px,17vh,190px)] pb-[clamp(56px,8vh,90px)] text-on-dark">
           <p className="eyebrow mb-4">Une maison commune à Saint-Vrain</p>
           <h1 className="font-heading font-semibold text-[clamp(38px,6.2vw,76px)] leading-[1.05] mb-5">
-            L&rsquo;EPEHMIF vous accueille
+            Une famille de foi, en hmong et en français
           </h1>
           <p className="max-w-[560px] text-[18px] leading-[1.6] mb-8 opacity-95">
             Une église protestante évangélique hmong d&rsquo;Île-de-France, ouverte à tous ceux
@@ -71,10 +71,10 @@ export default function Home() {
               Venez un dimanche
             </Link>
             <Link
-              href="/notre-eglise"
+              href="#dimanche"
               className="rounded-[10px] border-[1.5px] border-[rgba(253,248,243,.6)] text-on-dark text-[14.5px] font-semibold px-6 py-3.5"
             >
-              Découvrir notre église
+              Voir les horaires
             </Link>
           </div>
           <a
@@ -123,23 +123,23 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="max-w-[1160px] mx-auto px-5 md:px-8 pb-[clamp(56px,8vw,104px)]">
+      <section id="dimanche" className="scroll-mt-[calc(66px+24px)] max-w-[1160px] mx-auto px-5 md:px-8 pb-[clamp(56px,8vw,104px)]">
         <div className="grid gap-[22px] md:grid-cols-2">
           <div className="rounded-2xl bg-acc/20 border border-acc/40 p-[clamp(26px,4vw,48px)]">
             <p className="eyebrow mb-3">Le dimanche chez nous</p>
             <h3 className="font-heading font-semibold text-2xl mb-3">Culte du dimanche</h3>
             <p className="text-[15px] leading-[1.6] opacity-85">
-              [À FOURNIR : horaires des cultes]
+              10h00 – 11h45, bilingue français/hmong
+              <br />
+              École du dimanche et garderie en parallèle du culte
               <br />
               32 avenue Charles René de Mortemart, 91770 Saint-Vrain
             </p>
           </div>
           <div className="rounded-2xl bg-acc/20 border border-acc/40 p-[clamp(26px,4vw,48px)]">
             <p className="eyebrow mb-3">Le dimanche chez nous</p>
-            <h3 className="font-heading font-semibold text-2xl mb-3">École du dimanche</h3>
-            <p className="text-[15px] leading-[1.6] opacity-85">
-              Un temps dédié aux enfants, en parallèle du culte. [À FOURNIR : détails pratiques]
-            </p>
+            <h3 className="font-heading font-semibold text-2xl mb-3">Études en groupes</h3>
+            <p className="text-[15px] leading-[1.6] opacity-85">13h30 – 15h30</p>
           </div>
         </div>
       </section>
