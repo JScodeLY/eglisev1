@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import MobileMenu from "./MobileMenu";
 
 const NAV_LINKS = [
   { href: "/", label: "Accueil" },
@@ -23,6 +24,7 @@ export default function Header() {
   const isPoles = pathname?.startsWith("/espace-poles") ?? false;
   const [scrolled, setScrolled] = useState(false);
   const [moreOpen, setMoreOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
   const [lang, setLang] = useState<"fr" | "hmn">("fr");
 
   useEffect(() => {
@@ -121,13 +123,26 @@ export default function Header() {
             </button>
             <Link
               href="/contact"
-              className="rounded-[10px] bg-fill text-on-pri text-[14.5px] font-semibold px-[17px] py-[10px] transition-[filter] hover:brightness-110"
+              className="hidden md:inline-block rounded-[10px] bg-fill text-on-pri text-[14.5px] font-semibold px-[17px] py-[10px] transition-[filter] hover:brightness-110"
             >
               Venez un dimanche
             </Link>
+            <button
+              type="button"
+              onClick={() => setMobileOpen(true)}
+              aria-label="Ouvrir le menu"
+              aria-expanded={mobileOpen}
+              className="md:hidden grid place-items-center w-11 h-11 -mr-2.5"
+            >
+              <span className="sr-only">Menu</span>
+              <svg width="22" height="16" viewBox="0 0 22 16" fill="none" aria-hidden="true">
+                <path d="M0 1h22M0 8h22M0 15h22" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+              </svg>
+            </button>
           </div>
         </div>
       </header>
+      <MobileMenu open={mobileOpen} onClose={() => setMobileOpen(false)} />
       {lang === "hmn" && (
         <div className="fixed top-[66px] w-full z-30 bg-dark text-on-dark text-center text-sm py-2">
           [À FOURNIR : traduction hmong]
