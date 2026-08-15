@@ -160,8 +160,8 @@ export default function Home() {
               key={card.title}
               className="rounded-2xl bg-card border border-line p-7 flex flex-col"
             >
-              <div className="flex items-center gap-3 mb-3">
-                <span className="text-pri shrink-0">
+              <div className="flex items-start gap-3 mb-3">
+                <span className="text-pri shrink-0 mt-0.5">
                   <card.icon />
                 </span>
                 <h3 className="font-heading font-semibold text-[21px]">{card.title}</h3>
