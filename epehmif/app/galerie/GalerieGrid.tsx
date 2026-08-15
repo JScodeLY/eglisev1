@@ -54,7 +54,7 @@ export default function GalerieGrid() {
         {filtered.map((item) => (
           <div
             key={item.id}
-            className="rounded-xl border-2 border-dashed border-line grid place-items-center text-sm opacity-60 text-center px-3"
+            className="rounded-xl border-2 border-dashed border-line grid place-items-center text-sm opacity-70 text-center px-3"
             style={item.big ? { gridColumn: "span 2" } : undefined}
           >
             [À FOURNIR : {item.type === "video" ? "vidéo" : "photo"} — {item.album}]

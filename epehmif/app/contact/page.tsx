@@ -31,7 +31,7 @@ export default function ContactPage() {
             <p className="eyebrow mb-3">Horaires</p>
             <p className="text-[15px] leading-[1.6] opacity-90">[À FOURNIR : horaires des cultes]</p>
           </div>
-          <div className="rounded-2xl border-2 border-dashed border-line h-64 grid place-items-center text-sm opacity-60">
+          <div className="rounded-2xl border-2 border-dashed border-line h-64 grid place-items-center text-sm opacity-70">
             [Emplacement carte]
           </div>
         </div>

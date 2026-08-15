@@ -37,7 +37,7 @@ export default function NotreEglisePage() {
         <p className="max-w-2xl text-[16px] leading-[1.6] opacity-85">
           [À FOURNIR : texte d&rsquo;identité et de vision]
         </p>
-        <div className="mt-8 border-2 border-dashed border-line rounded-2xl h-56 grid place-items-center text-sm opacity-60">
+        <div className="mt-8 border-2 border-dashed border-line rounded-2xl h-56 grid place-items-center text-sm opacity-70">
           [À FOURNIR : photo de la communauté]
         </div>
       </section>

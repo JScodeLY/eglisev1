@@ -46,7 +46,7 @@ export default function ContactForm() {
           className="w-full rounded-[10px] border border-line bg-card px-4 py-2.5 text-[15px]"
         />
       </div>
-      <p className="text-xs opacity-60">[À FOURNIR : mention RGPD et adresse de réception du formulaire]</p>
+      <p className="text-xs opacity-70">[À FOURNIR : mention RGPD et adresse de réception du formulaire]</p>
       <button
         type="submit"
         className="rounded-[10px] bg-fill text-on-pri text-[14.5px] font-semibold px-6 py-3 transition-[filter] hover:brightness-110"
