@@ -35,6 +35,15 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, [isHome]);
 
+  useEffect(() => {
+    if (!moreOpen) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setMoreOpen(false);
+    };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [moreOpen]);
+
   const isMorePage = MORE_LINKS.some((l) => l.href === pathname);
   const opaque = !isHome || scrolled;
 
@@ -84,6 +93,9 @@ export default function Header() {
               <button
                 type="button"
                 onClick={() => setMoreOpen((v) => !v)}
+                aria-haspopup="menu"
+                aria-expanded={moreOpen}
+                aria-controls="more-menu"
                 className="relative pb-1 border-b-2 border-transparent"
               >
                 Plus
@@ -93,6 +105,8 @@ export default function Header() {
               </button>
               {moreOpen && (
                 <div
+                  id="more-menu"
+                  role="menu"
                   className="absolute right-0 mt-2 min-w-[160px] rounded-xl bg-card text-txt shadow-[0_16px_40px_rgba(0,0,0,.16)] py-2"
                   onMouseLeave={() => setMoreOpen(false)}
                 >
@@ -100,6 +114,7 @@ export default function Header() {
                     <Link
                       key={link.href}
                       href={link.href}
+                      role="menuitem"
                       onClick={() => setMoreOpen(false)}
                       className="block px-4 py-2 text-[14px] hover:bg-bg"
                     >
