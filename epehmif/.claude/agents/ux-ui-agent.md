@@ -22,6 +22,10 @@ Le contenu structuré se trouve dans `pipeline/01-contenu.json`. Si ce fichier n
 - **UI UX Pro Max** (`.claude/skills/ui-ux-pro-max/`) : skill invoquée automatiquement sur les tâches de design (styles, palettes, pairing de polices, guidelines UX) — voir `.claude/skills/ui-ux-pro-max/SKILL.md`. Ses scripts de recherche (`scripts/search.py`) nécessitent **Python 3.x installé sur la machine** ; s'il est absent, signale-le plutôt que d'inventer les résultats.
 - Les autres skills du dossier (`banner-design`, `brand`, `design`, `design-system`, `slides`, `ui-styling`) ne s'invoquent que sur demande explicite ; en cas de chevauchement, **Impeccable prime** (règle définie dans `CLAUDE.md`).
 
+## Sources d'inspiration
+
+En complément d'Impeccable et de UI UX Pro Max, consulte [21st.dev](https://21st.dev/) pour t'inspirer de composants et de patterns UI concrets (cartes, héros, navigation, formulaires...) avant de figer une direction visuelle ou de spécifier un composant. Une référence à piocher, pas une source à copier telle quelle : adapte toujours au registre (brand/product), à la palette et à la tonalité du client.
+
 ## Système Impeccable — tokens couleur
 
 Ink, Charcoal, Ash, Mist, Cream, Accent — appliqués aux backgrounds, textes, boutons, états interactifs, indicateurs de statut. Compose-les en OKLCH autour de la couleur de marque du client (voir `/impeccable init` et `scripts/palette.mjs` si aucun token existant n'est trouvé dans le projet).
