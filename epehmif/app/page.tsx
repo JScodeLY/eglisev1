@@ -213,21 +213,28 @@ export default function Home() {
         </h2>
         <div className="grid gap-[22px] md:grid-cols-2">
           {LATEST_MESSAGES.map((msg, i) => (
-            <div key={i} className="rounded-2xl bg-card border border-line p-4 flex items-center gap-4">
-              <div className="relative shrink-0 w-24 h-[54px] rounded-[10px] overflow-hidden border border-line bg-line/50">
-                <span className="absolute inset-0 grid place-items-center bg-black/25">
-                  <span className="grid place-items-center w-7 h-7 rounded-full bg-bg/90 text-fill">
-                    <svg width="10" height="12" viewBox="0 0 11 13" fill="currentColor" aria-hidden="true">
+            <Link
+              key={i}
+              href="/predications"
+              className="group rounded-2xl bg-card border border-line p-4 flex items-center gap-4 transition-colors hover:border-pri/50"
+            >
+              <div className="relative shrink-0 w-28 h-16 rounded-[10px] overflow-hidden bg-line/50">
+                <div className="absolute inset-0 bg-black/20 transition-colors duration-300 group-hover:bg-black/35" />
+                <span className="absolute inset-0 grid place-items-center">
+                  <span className="grid place-items-center w-9 h-9 rounded-full bg-fill text-on-pri transition-transform duration-300 group-hover:scale-110">
+                    <svg width="11" height="13" viewBox="0 0 11 13" fill="currentColor" aria-hidden="true">
                       <path d="M0 0l11 6.5L0 13z" />
                     </svg>
                   </span>
                 </span>
               </div>
               <div>
-                <h3 className="font-heading font-semibold text-[17px] mb-1">{msg.title}</h3>
+                <h3 className="font-heading font-semibold text-[17px] mb-1 group-hover:text-pri transition-colors">
+                  {msg.title}
+                </h3>
                 <p className="text-sm opacity-70">{msg.ref}</p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
         <Link
