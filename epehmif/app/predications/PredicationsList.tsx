@@ -76,43 +76,55 @@ export default function PredicationsList() {
         {filtered.length} message{filtered.length > 1 ? "s" : ""}
       </p>
 
-      <ul className="divide-y divide-line border-t border-b border-line">
+      <div
+        className="grid gap-[22px]"
+        style={{ gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))" }}
+      >
         {filtered.map((s, i) => (
-          <li key={i} className="flex items-center gap-4 py-4">
-            <button
-              type="button"
-              aria-label={`Écouter ${s.title}`}
-              className="relative shrink-0 w-28 h-[63px] rounded-[10px] overflow-hidden border border-line bg-line/50"
-            >
+          <button
+            key={i}
+            type="button"
+            aria-label={`Écouter ${s.title}`}
+            className="group text-left rounded-2xl border border-line bg-card overflow-hidden transition-colors hover:border-pri/50"
+          >
+            <div className="relative aspect-video overflow-hidden bg-line/50">
               {s.thumbnail ? (
-                <Image src={s.thumbnail} alt="" fill className="object-cover" />
+                <Image
+                  src={s.thumbnail}
+                  alt=""
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                />
               ) : (
-                <span className="absolute inset-0 grid place-items-center text-txt/35">
-                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
-                    <rect x="1.5" y="1.5" width="15" height="11" rx="1.6" stroke="currentColor" strokeWidth="1.4" />
-                    <circle cx="5.5" cy="6.3" r="1.1" stroke="currentColor" strokeWidth="1.2" />
-                    <path d="M2 11l3.6-3.4 2.6 2.2 3-3.3L16 10" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                <span className="absolute inset-0 grid place-items-center text-txt/25">
+                  <svg width="34" height="34" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+                    <rect x="1.5" y="1.5" width="15" height="11" rx="1.6" stroke="currentColor" strokeWidth="1.3" />
+                    <circle cx="5.5" cy="6.3" r="1.1" stroke="currentColor" strokeWidth="1.1" />
+                    <path d="M2 11l3.6-3.4 2.6 2.2 3-3.3L16 10" stroke="currentColor" strokeWidth="1.1" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </span>
               )}
-              <span className="absolute inset-0 grid place-items-center bg-black/25">
-                <span className="grid place-items-center w-8 h-8 rounded-full bg-bg/90 text-fill">
-                  <svg width="11" height="13" viewBox="0 0 11 13" fill="currentColor" aria-hidden="true">
+              <div className="absolute inset-0 bg-black/20 transition-colors duration-300 group-hover:bg-black/35" />
+              <span className="absolute inset-0 grid place-items-center">
+                <span className="grid place-items-center w-14 h-14 rounded-full bg-fill text-on-pri transition-transform duration-300 group-hover:scale-110">
+                  <svg width="16" height="19" viewBox="0 0 11 13" fill="currentColor" aria-hidden="true">
                     <path d="M0 0l11 6.5L0 13z" />
                   </svg>
                 </span>
               </span>
-            </button>
-            <div className="flex-1">
-              <p className="font-heading font-semibold text-[17px]">{s.title}</p>
+              <span className="absolute top-3 right-3 text-xs font-semibold uppercase tracking-wide rounded-full bg-bg/90 px-2.5 py-1">
+                {s.lang === "fr" ? "FR" : "HM"}
+              </span>
+            </div>
+            <div className="p-5">
+              <p className="font-heading font-semibold text-[18px] mb-1.5 group-hover:text-pri transition-colors">
+                {s.title}
+              </p>
               <p className="text-sm opacity-70">{s.ref ? `${s.ref} · ${s.date}` : s.date}</p>
             </div>
-            <span className="text-xs font-semibold uppercase tracking-wide rounded-full border border-line px-2.5 py-1">
-              {s.lang === "fr" ? "FR" : "HM"}
-            </span>
-          </li>
+          </button>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }
