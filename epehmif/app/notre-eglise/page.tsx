@@ -16,11 +16,11 @@ const RATTACHEMENTS = [
 ];
 
 const HISTOIRE = [
-  { year: "1976", label: "[À FOURNIR : description de l'étape 1976]" },
-  { year: "1979", label: "[À FOURNIR : description de l'étape 1979]" },
-  { year: "1992", label: "[À FOURNIR : description de l'étape 1992]" },
-  { year: "2002", label: "[À FOURNIR : description de l'étape 2002]" },
-  { year: "Aujourd'hui", label: "[À FOURNIR : transition EELF → EPEHMIF et date d'installation à Saint-Vrain]" },
+  { year: "1976", label: "Débuts à Boulogne-Billancourt, sous le pasteur Thongsuk" },
+  { year: "1979", label: "Constitution en association cultuelle (EELF)" },
+  { year: "1992", label: "Pasteur Oudone Lis, puis installation en Essonne" },
+  { year: "2002", label: "Pasteur Xiong" },
+  { year: "Aujourd'hui", label: "[À FOURNIR : pasteur actuel]" },
 ];
 
 export default function NotreEglisePage() {
@@ -28,9 +28,13 @@ export default function NotreEglisePage() {
     <>
       <div className="pt-[clamp(56px,8vw,104px)] pb-10 max-w-[1160px] mx-auto px-5 md:px-8">
         <p className="eyebrow mb-3">Notre église</p>
-        <h1 className="font-heading font-semibold text-[clamp(34px,5vw,58px)] leading-[1.08]">
-          Une maison commune
+        <h1 className="font-heading font-semibold text-[clamp(34px,5vw,58px)] leading-[1.08] mb-4">
+          Une communauté hmong, enracinée dans l&rsquo;Évangile
         </h1>
+        <p className="max-w-xl text-[16px] leading-[1.6] opacity-85">
+          Église Protestante Évangélique Hmong d&rsquo;Île-de-France, à Saint-Vrain. Le hmong et
+          le français cohabitent dans nos cultes et notre enseignement.
+        </p>
       </div>
 
       <SubNav />
@@ -79,6 +83,10 @@ export default function NotreEglisePage() {
             </div>
           ))}
         </div>
+        <p className="text-sm opacity-70 mt-6">
+          [À FOURNIR : transition EELF → EPEHMIF et date d&rsquo;installation à Saint-Vrain à
+          confirmer]
+        </p>
       </section>
 
       <section
@@ -88,9 +96,24 @@ export default function NotreEglisePage() {
         <h2 className="font-heading font-semibold text-[clamp(24px,2.8vw,34px)] leading-[1.15] mb-3">
           Conseil des anciens
         </h2>
-        <p className="text-sm opacity-70 mb-8">
-          Pasteur d&rsquo;origine ivoirienne — [À FOURNIR : nom et présentation du pasteur actuel]
+        <p className="text-[15px] leading-[1.6] opacity-85 mb-8 max-w-xl">
+          L&rsquo;instance qui porte la direction spirituelle de l&rsquo;église, aux côtés du
+          pasteur.
         </p>
+        <div className="rounded-2xl bg-card border border-line p-6 flex items-center gap-5 mb-8">
+          <div className="w-20 h-24 rounded-xl bg-line shrink-0" />
+          <div>
+            <p className="text-[11px] font-semibold uppercase tracking-wide text-acc mb-1">
+              Pasteur
+            </p>
+            <p className="font-heading font-semibold text-[19px] mb-1">
+              [À FOURNIR : nom du pasteur actuel, d&rsquo;origine ivoirienne]
+            </p>
+            <p className="text-[15px] opacity-85">
+              Conduit la communauté et préside le conseil des anciens.
+            </p>
+          </div>
+        </div>
         <div
           className="grid gap-[22px]"
           style={{ gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))" }}

@@ -11,14 +11,12 @@ type Sermon = {
   href: string;
 };
 
-const SERMONS: Sermon[] = Array.from({ length: 6 }, (_, i) => ({
-  title: "[À FOURNIR : titre du message]",
-  ref: "[À FOURNIR : référence biblique]",
-  date: "[À FOURNIR : date]",
-  year: ["2026", "2025", "2024"][i % 3],
-  lang: i % 2 === 0 ? "fr" : "hmn",
-  href: "#",
-}));
+const SERMONS: Sermon[] = [
+  { title: "Tug mivnyuam kws nooglug", ref: "", date: "2010", year: "2010", lang: "hmn", href: "#" },
+  { title: "Xaav Tau Txujsa", ref: "", date: "2010", year: "2010", lang: "hmn", href: "#" },
+  { title: "Tswv Yexus yog tus tswv yug yaj", ref: "", date: "2010", year: "2010", lang: "hmn", href: "#" },
+  { title: "Yexus yog leejtwg rua koj tag ?", ref: "", date: "2010", year: "2010", lang: "hmn", href: "#" },
+];
 
 const YEARS = Array.from(new Set(SERMONS.map((s) => s.year))).sort().reverse();
 
@@ -88,9 +86,7 @@ export default function PredicationsList() {
             </button>
             <div className="flex-1">
               <p className="font-heading font-semibold text-[17px]">{s.title}</p>
-              <p className="text-sm opacity-70">
-                {s.ref} · {s.date}
-              </p>
+              <p className="text-sm opacity-70">{s.ref ? `${s.ref} · ${s.date}` : s.date}</p>
             </div>
             <span className="text-xs font-semibold uppercase tracking-wide rounded-full border border-line px-2.5 py-1">
               {s.lang === "fr" ? "FR" : "HM"}
