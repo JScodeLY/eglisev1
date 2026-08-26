@@ -213,9 +213,20 @@ export default function Home() {
         </h2>
         <div className="grid gap-[22px] md:grid-cols-2">
           {LATEST_MESSAGES.map((msg, i) => (
-            <div key={i} className="rounded-2xl bg-card border border-line p-7">
-              <h3 className="font-heading font-semibold text-[20px] mb-2">{msg.title}</h3>
-              <p className="text-sm opacity-70">{msg.ref}</p>
+            <div key={i} className="rounded-2xl bg-card border border-line p-4 flex items-center gap-4">
+              <div className="relative shrink-0 w-24 h-[54px] rounded-[10px] overflow-hidden border border-line bg-line/50">
+                <span className="absolute inset-0 grid place-items-center bg-black/25">
+                  <span className="grid place-items-center w-7 h-7 rounded-full bg-bg/90 text-fill">
+                    <svg width="10" height="12" viewBox="0 0 11 13" fill="currentColor" aria-hidden="true">
+                      <path d="M0 0l11 6.5L0 13z" />
+                    </svg>
+                  </span>
+                </span>
+              </div>
+              <div>
+                <h3 className="font-heading font-semibold text-[17px] mb-1">{msg.title}</h3>
+                <p className="text-sm opacity-70">{msg.ref}</p>
+              </div>
             </div>
           ))}
         </div>
